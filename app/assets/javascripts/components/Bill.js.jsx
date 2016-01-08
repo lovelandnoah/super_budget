@@ -4,12 +4,15 @@ class Bill extends React.Component{
 	}
 
 	render(){
-		return(<div>
-						 <div>
-						 	 <div>
-
+		return(<div className='container'>
+						 <div className='card blue-grey darken-1'>
+						 	 <div className='card-content white-text'>
+						 	 	 <p>{this.props.name}</p>
+						 	 </div>
+						 	 <div className='card-action'>
+						 	   <a onClick={this.userBills}>{this.props.amount}</a>
 						 	 </div>
 						 </div>
-					 </div>)
+					 </div>);
 	}
 }

@@ -1,8 +1,16 @@
 class BillsController < ApplicationController
+	def index
+		@bills = Bill.all
+		render json: @bills
+	end
+	
+	
 	def create
-		@bill = current_user.bills.create(bill_params)
+		@bill = Bill.create(bill_params)
 		render 'bill'
 	end
+
+
 
 	private
 		def bill_params

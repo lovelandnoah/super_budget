@@ -27,11 +27,11 @@ class Bills extends React.Component{
 	}
 
 	render(){
-		let bills = this.state.bills.map( tweet => {
+		let bills = this.state.bills.map( bill => {
 			let key = `bill-${bill.id}`;
 			return(<Bill key={key} {...bill} />);
 		})
-		return(<div>
+		return(<div className="container">
 						 <input placeholder="Name of Bill" ref='newName' autoFocus={true} />
 						 <input placeholder="Amount of Bill" ref='newAmount' />
 						 <button className='btn' onClick={this.newBill}>Post</button>
